@@ -381,6 +381,7 @@ footer {
                 display: flex;
             }
             .date {
+                .body-copy();
                 background-color: @green;
                 border-radius: 5px 5px 0 0;
                 text-align: center;
@@ -388,7 +389,6 @@ footer {
                 font-weight: bold;
                 color: @white;
                 text-transform: uppercase;
-                .body-copy();
                 @media (min-width: 768px) {
                     display: flex;
                     flex-direction: column;
@@ -405,6 +405,9 @@ footer {
                     display: flex;
                     align-items: center;
                     padding: @pad-xs @pad-sm;
+                }
+                p {
+                    padding-bottom: 0;
                 }
             }
         }

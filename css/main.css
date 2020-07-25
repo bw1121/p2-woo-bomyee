@@ -562,6 +562,8 @@ footer .copyright a {
   }
 }
 .events-email .events .event-item .date {
+  font-size: 1rem;
+  padding-bottom: 1rem;
   background-color: #b0b579;
   border-radius: 5px 5px 0 0;
   text-align: center;
@@ -569,8 +571,6 @@ footer .copyright a {
   font-weight: bold;
   color: #ffffff;
   text-transform: uppercase;
-  font-size: 1rem;
-  padding-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .events-email .events .event-item .date {
@@ -602,6 +602,9 @@ footer .copyright a {
     align-items: center;
     padding: 0.5rem 1rem;
   }
+}
+.events-email .events .event-item .event-name p {
+  padding-bottom: 0;
 }
 .events-email .email {
   background-color: #82a9b4;
