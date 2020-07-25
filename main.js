@@ -44,13 +44,13 @@ var disclosureLabel = document.querySelector('.disclosure-label');
 var plusSymbol = document.querySelector('.plus');
 
 function showDisclosure() {
-    if (disclosure.style.display === 'none') {
-        disclosure.style.display = 'block';
-        plusSymbol.innerHTML = '&#8722;';
-    } 
-    else {
+    if (disclosure.style.display === 'block') {
         disclosure.style.display = 'none';
         plusSymbol.innerHTML = '&#43;';
+    } 
+    else {
+        disclosure.style.display = 'block';
+        plusSymbol.innerHTML = '&#8722;';
     }
 }
 
