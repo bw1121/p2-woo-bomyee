@@ -12,7 +12,7 @@ body {
     color: @darkgray;
 }
 
-h2 {
+h1, h2 {
     font-size: @font-24;
     line-height: 1.8rem;
     padding-bottom: @pad-sm;
@@ -31,6 +31,7 @@ h3 {
 
 p {
     font-size: @font-16;
+    padding-bottom: @pad-sm;
     @media (min-width: 768px) {
         font-size: @font-18;
     }
@@ -437,6 +438,42 @@ footer {
             @media (min-width: 1024px) {
                 font-size: @font-18;
                 margin-top: @pad-md;
+            }
+        }
+    }
+}
+
+/* ***** SERVICE PAGE ***** */
+/* ***** OVERVIEW ***** */
+.overview {
+    .fix-top();
+    .overview-content {
+        .section-padding();
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (min-width: 1024px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .services-blurb {
+            @media (min-width: 1024px) {
+                width: 50%;
+            }
+        }
+        .services-img {
+            padding-top: @pad-sm;
+            width: 100%;
+            @media (min-width: 768px) {
+                width: 40%;
+                align-self: flex-start;
+            }
+            @media (min-width: 1600px) {
+                width: 550px;
+            }
+            img {
+                width: 100%;
+                border-radius: 5px;
             }
         }
     }

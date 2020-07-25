@@ -55,12 +55,14 @@ body {
   font-family: noto-sans, sans-serif;
   color: #242424;
 }
+h1,
 h2 {
   font-size: 1.5rem;
   line-height: 1.8rem;
   padding-bottom: 1rem;
 }
 @media (min-width: 1024px) {
+  h1,
   h2 {
     font-size: 1.85rem;
   }
@@ -76,6 +78,7 @@ h3 {
 }
 p {
   font-size: 1rem;
+  padding-bottom: 1rem;
 }
 @media (min-width: 768px) {
   p {
@@ -606,4 +609,56 @@ footer .copyright a {
     font-size: 1.125rem;
     margin-top: 1.5rem;
   }
+}
+/* ***** SERVICE PAGE ***** */
+/* ***** OVERVIEW ***** */
+.overview {
+  padding-top: 60px;
+}
+@media (min-width: 1024px) {
+  .overview {
+    padding-top: 70px;
+    flex-direction: row;
+  }
+}
+.overview .overview-content {
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .overview .overview-content {
+    padding: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .overview .overview-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1024px) {
+  .overview .overview-content .services-blurb {
+    width: 50%;
+  }
+}
+.overview .overview-content .services-img {
+  padding-top: 1rem;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .overview .overview-content .services-img {
+    width: 40%;
+    align-self: flex-start;
+  }
+}
+@media (min-width: 1600px) {
+  .overview .overview-content .services-img {
+    width: 550px;
+  }
+}
+.overview .overview-content .services-img img {
+  width: 100%;
+  border-radius: 5px;
 }
