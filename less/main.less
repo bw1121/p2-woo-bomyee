@@ -287,12 +287,11 @@ footer {
 
 /* ***** HERO ***** */
 .hero {
-    padding-top: 60px;
+    .fix-top();
     display: flex;
     flex-direction: column-reverse;
     color: @white;
     @media (min-width: 1024px) {
-        padding-top: 70px;
         flex-direction: row;
     }
     .hero-img {

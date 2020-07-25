@@ -36,3 +36,12 @@
     padding: 2rem;
   }
 }
+.fix-top {
+  padding-top: 60px;
+}
+@media (min-width: 1024px) {
+  .fix-top {
+    padding-top: 70px;
+    flex-direction: row;
+  }
+}

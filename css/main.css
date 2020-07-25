@@ -36,6 +36,15 @@
     padding: 2rem;
   }
 }
+.fix-top {
+  padding-top: 60px;
+}
+@media (min-width: 1024px) {
+  .fix-top {
+    padding-top: 70px;
+    flex-direction: row;
+  }
+}
 /* ***** GLOBAL ***** */
 * {
   margin: 0;
@@ -394,6 +403,11 @@ footer .copyright a {
 @media (min-width: 1024px) {
   .hero {
     padding-top: 70px;
+    flex-direction: row;
+  }
+}
+@media (min-width: 1024px) {
+  .hero {
     flex-direction: row;
   }
 }
