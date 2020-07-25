@@ -1,6 +1,6 @@
 @import "mixins";
 
-//Global
+/* ***** GLOBAL ***** */
 * {
     margin: 0;
     padding: 0;
@@ -11,47 +11,64 @@ body {
     font-family: noto-sans, sans-serif;
 }
 
-//Header
+/* ***** HEADER ***** */
 header {
     background-color: @white;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
-    height: 70px;
+    height: 60px;
     position: fixed;
     width: 100%;
+    @media (min-width: 1024px) {
+        height: 70px;
+    }
+    @media (min-width: 1600px) {
+        display: flex;
+        justify-content: center;
+    }
     .max-width {
+        padding: 0 @pad-sm;
         display: flex;
         align-items: center;
         height: 100%;
-        padding: 0 3%;
         justify-content: space-between;
-        img {
+        @media (min-width: 1600px) {
+            width: 1600px;
+        }
+        .logo {
             height: 40px;
             .links();
-            @media (min-width: 1024px) {
-                height: 50px;
+            img {
+                height: 100%;
             }
         }
+        // Mobile Nav
         .mobile-nav {
+            height: 30px;
             @media (min-width: 1024px) {
                 display: none;
             }
+            // Mobile Menu
             .menu-links {
                 display: none;
             }
-            .show {
+            .show-menu {
                 display: block;
                 position: absolute;
                 width: 100vw;
-                top: 70px;
+                top: 59px;
                 right: 0;
                 background-color: @lightgray;
                 text-align: center;
                 transition-duration: 1s;
+                @media (min-width: 1024px) {
+                    top: 70px;
+                }
                 a {
                     .links();
                     display: block;
                     padding: @pad-sm 0;
                     color: @darkgray;
+                    border-top: 1px solid @gray;
                     &:hover {
                         background-color: @gray;
                     }
@@ -80,6 +97,7 @@ header {
                 }
             }
         }
+        // Desktop Nav
         .desktop-nav {
             display: none;
             height: 70px;
@@ -96,18 +114,18 @@ header {
                         background-color: @lightgray;
                     }
                 }
-                .dropdown {
-                    .menu-dropdown {
-                        background-color: @lightgray;
-                        position: absolute;
-                        top: 70px;
-                        a {
-                            display: block;
-                            font-weight: @regular;
-                            padding: @pad-sm;
-                            &:hover {
-                                background-color: @gray;
-                            }
+                .menu-dropdown {
+                    display: none;
+                    background-color: @lightgray;
+                    position: absolute;
+                    top: 70px;
+                    a {
+                        border-top: 1px solid @gray;
+                        display: block;
+                        font-weight: @regular;
+                        padding: @pad-sm;
+                        &:hover {
+                            background-color: @gray;
                         }
                     }
                 }
