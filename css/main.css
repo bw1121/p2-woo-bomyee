@@ -157,6 +157,7 @@ header .header-content .logo img {
 }
 header .header-content .mobile-nav {
   height: 30px;
+  text-transform: uppercase;
 }
 @media (min-width: 1024px) {
   header .header-content .mobile-nav {
@@ -361,6 +362,11 @@ footer .copyright a {
     font-size: 1.125rem;
   }
 }
+@media (min-width: 1440px) {
+  .quick-links .links {
+    padding: 1.5rem 0.5rem;
+  }
+}
 .quick-links .links img {
   width: 22px;
   padding-right: 0.5rem;
@@ -417,6 +423,11 @@ footer .copyright a {
 @media (min-width: 768px) {
   .hero .hero-img img {
     object-position: 0 -170px;
+  }
+}
+@media (min-width: 1500px) {
+  .hero .hero-img img {
+    object-position: 0 -300px;
   }
 }
 .hero .hero-aside {

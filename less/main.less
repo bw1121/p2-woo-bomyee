@@ -100,6 +100,7 @@ header {
         // Mobile Nav
         .mobile-nav {
             height: 30px;
+            text-transform: uppercase;
             @media (min-width: 1024px) {
                 display: none;
             }
@@ -265,6 +266,9 @@ footer {
             padding: @pad-sm @pad-xs;
             font-size: @font-18;
         }
+        @media (min-width: 1440px) {
+            padding: @pad-md @pad-xs;
+        }
         img {
             width: 22px;
             padding-right: @pad-xs;
@@ -308,6 +312,9 @@ footer {
             object-position: 0 -70px;
             @media (min-width: 768px) {
                 object-position: 0 -170px;
+            }
+            @media (min-width: 1500px) {
+                object-position: 0 -300px;
             }
         }
     }
