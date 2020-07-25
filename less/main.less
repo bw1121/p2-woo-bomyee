@@ -12,11 +12,27 @@ body {
     color: @darkgray;
 }
 
+h2 {
+    font-size: @font-24;
+    line-height: 1.8rem;
+    padding-bottom: @pad-sm;
+    @media (min-width: 1024px) {
+        font-size: @font-30;
+    }
+}
+
 h3 {
     text-transform: uppercase;
     font-size: @font-16;
-    @media (min-width: 768px) {
-        font-size: @font-18;
+    @media (min-width: 1024px) {
+        font-size: @font-24;
+    }
+}
+
+p {
+    font-size: @font-16;
+    @media (min-width: 1024px) {
+        font-size: @font-20;
     }
 }
 
@@ -27,6 +43,17 @@ h3 {
         .max-width {
             width: 1600px;
         }
+    }
+}
+
+.btn-white {
+    .btn();
+    .links();
+    border-color: @white;
+    color: @white;
+    &:hover {
+        background-color: @white;
+        color: @green;
     }
 }
 
@@ -159,29 +186,28 @@ header {
     }
 }
 
-main img, .hero-img img, .quick-links img {
-    width: 100%;
-}
-
 /* ***** QUICK LINKS ***** */
 .quick-links {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: @pad-sm 0;
     @media (min-width: 1024px) {
         flex-direction: row;
         justify-content: space-around;
         padding: @pad-sm;
     }
     .links {
+        .links();
+        .btn();
+        color: @darkgray;
+        border-color: @green;
         width: 80%;
         background-color: @fadedGreen;
         display: flex;
         justify-content: center;
-        .links();
-        color: @darkgray;
-        .btn();
-        border-color: @green;
+        padding: @pad-sm;
+        margin: @pad-xs;
         &:hover {
             background-color: @white;
         }
@@ -200,4 +226,42 @@ main img, .hero-img img, .quick-links img {
             display: inline-block;
         }
     }
+}
+
+/* ***** HERO ***** */
+.hero {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: @green;
+    color: @white;
+    .hero-img {
+        height: 225px;
+        overflow: hidden;
+        @media (min-width: 425px) {
+            height: 300px;
+        }
+        @media (min-width: 768px) {
+            height: 450px;
+        }
+        img {
+            width: 100%;
+            @media (min-width: 425px) {
+                object-position: 0 -70px;
+            }
+            @media (min-width: 768px) {
+                object-position: 0 -170px;
+            }
+        }
+    }
+    .hero-aside {
+        padding: @pad-sm;
+        text-align: center;
+
+    }
+}
+
+
+
+main img, .hero-img img, .quick-links img {
+    width: 100%;
 }
