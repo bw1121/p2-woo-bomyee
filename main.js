@@ -55,3 +55,24 @@ function showDisclosure() {
 }
 
 disclosureLabel.addEventListener('click', showDisclosure);
+
+// Accordions
+var accordion = document.getElementsByClassName('label');
+
+function openAccordion() {
+    var info = this.nextElementSibling;
+    var plus = this.children[1];
+
+    if (info.style.display === 'block') {
+        info.style.display = 'none';
+        plus.innerHTML = '&#43;';
+    }
+    else {
+        info.style.display = 'block';
+        plus.innerHTML = '&#8722;';
+    }
+}
+
+for (i = 0; i < accordion.length; i++) {
+    accordion[i].addEventListener('click', openAccordion);   
+}
