@@ -263,6 +263,49 @@ header .header-content .desktop-nav {
     background-color: #ffffff;
   }
 }
+/* ***** FOOTER ***** */
+footer {
+  background-color: #d3d3d3;
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+@media (min-width: 1024px) {
+  footer {
+    padding: 2rem;
+  }
+}
+footer p {
+  font-size: 1rem;
+}
+footer .disclosure-label {
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+}
+@media (min-width: 1024px) {
+  footer .disclosure-label {
+    display: none;
+  }
+}
+footer .disclosure {
+  display: none;
+}
+@media (min-width: 1024px) {
+  footer .disclosure {
+    display: block;
+    text-align: left;
+  }
+}
+footer .copyright {
+  font-weight: 700;
+  padding-top: 2rem;
+}
+footer .copyright a {
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  color: #242424;
+}
 /* ***** QUICK LINKS ***** */
 .quick-links {
   display: flex;

@@ -199,6 +199,38 @@ header {
     }
 }
 
+/* ***** FOOTER ***** */
+footer {
+    background-color: @gray;
+    text-align: center;
+    .section-padding();
+    p {
+        font-size: @font-16;
+    }
+    .disclosure-label {
+        .links();
+        @media (min-width: 1024px) {
+            display: none;
+        }
+    }
+    .disclosure {
+        display: none;
+        @media (min-width: 1024px) {
+            display: block;
+            text-align: left;
+        }
+    }
+
+    .copyright {
+        font-weight: @bold;
+        padding-top: @pad-lg;
+        a {
+            .links();
+            color: @darkgray;
+        }
+    }
+}
+
 /* ***** QUICK LINKS ***** */
 .quick-links {
     display: flex;
