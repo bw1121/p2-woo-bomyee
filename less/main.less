@@ -31,6 +31,9 @@ h3 {
 
 p {
     font-size: @font-16;
+    @media (min-width: 768px) {
+        font-size: @font-18;
+    }
     @media (min-width: 1024px) {
         font-size: @font-20;
     }
@@ -59,7 +62,7 @@ p {
 
 .txt-link {
     .links();
-    display: block;
+    display: inline-block;
     color: @darkgray;
     padding-top: @pad-xs;
     &:hover {
@@ -285,6 +288,7 @@ header {
             padding: @pad-sm;
             @media (min-width: 1024px) {
                 text-align: left;
+                padding-left: @pad-lg;
             }
             @media (min-width: 1600px) {
                 width: 580px;
@@ -308,6 +312,90 @@ header {
         @media (min-width: 1024px) {
             display: inline-block;
             width: 40%;
+        }
+    }
+}
+
+/* ***** EVENTS SECTION ***** */
+.events-email {
+    .section-padding();
+    @media (min-width: 1024px) {
+        display: flex;
+        justify-content: space-between;
+    }
+    // Events
+    .events{
+        padding-bottom: @pad-md;
+        .event-item {
+            margin-bottom: @pad-sm;
+            border: 1px solid  @gray;
+            border-radius: 5px;
+            &:nth-child(4), &:nth-child(5) {
+                display: none;
+                @media (min-width: 1024px) {
+                    display: flex;
+                }
+            }
+            @media (min-width: 768px) {
+                display: flex;
+            }
+            .date {
+                background-color: @green;
+                border-radius: 5px 5px 0 0;
+                text-align: center;
+                padding: @pad-xs 0;
+                font-weight: bold;
+                color: @white;
+                text-transform: uppercase;
+                font-size: @font-16;
+                @media (min-width: 768px) {
+                    display: flex;
+                    flex-direction: column;
+                    border-radius: 5px 0 0 5px;
+                    width: 80px;
+                    font-size: @font-18;
+                    span {
+                        display: block;
+                    }
+                }
+                @media (min-width: 1024px) {
+                    font-size: @font-20;
+                }
+            }
+            .event-name {
+                padding: @pad-xs;
+                @media (min-width: 768px) {
+                    display: flex;
+                    align-items: center;
+                    padding: @pad-xs @pad-sm;
+                }
+            }
+        }
+    }
+    // Email Subscribe
+    .email {
+        background-color: @blue;
+        color: @white;
+        text-align: center;
+        height: fit-content;
+        .rounded-container();
+        @media (min-width: 1024px) {
+            width: 40%;
+            margin-left: @pad-md;
+        }
+        input {
+            border-radius: 5px;
+            padding: @pad-sm;
+            margin: @pad-sm auto 0;
+            font-size: @font-16;
+            text-align: center;
+            display: block;
+            position: relative;
+            width: 80%;
+            @media (min-width: 1024px) {
+                font-size: @font-18;
+                margin-top: @pad-md;
+            }
         }
     }
 }

@@ -6,10 +6,13 @@
     text-decoration: none;
 }
 
-// .rounded-container {
-//     border-radius: 5px;
-//     padding: @pad-sm;
-// }
+.rounded-container {
+    border-radius: 5px;
+    padding: @pad-md @pad-sm;
+    @media (min-width: 1024px) {
+        padding: @pad-xl @pad-sm;
+    }
+}
 
 .btn {
     border-width: 4px;
@@ -27,5 +30,8 @@
 }
 
 .section-padding {
-    padding: @pad-md @pad-sm;
+    padding: @pad-lg @pad-md;
+    @media (min-width: 1024px) {
+        padding: @pad-lg;
+    }
 }

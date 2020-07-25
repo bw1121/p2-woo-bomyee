@@ -3,6 +3,15 @@
   font-weight: 700;
   text-decoration: none;
 }
+.rounded-container {
+  border-radius: 5px;
+  padding: 1.5rem 1rem;
+}
+@media (min-width: 1024px) {
+  .rounded-container {
+    padding: 3rem 1rem;
+  }
+}
 .btn {
   border-width: 4px;
   border-style: solid;
@@ -20,7 +29,12 @@
   }
 }
 .section-padding {
-  padding: 1.5rem 1rem;
+  padding: 2rem 1.5rem;
+}
+@media (min-width: 1024px) {
+  .section-padding {
+    padding: 2rem;
+  }
 }
 /* ***** GLOBAL ***** */
 * {
@@ -53,6 +67,11 @@ h3 {
 }
 p {
   font-size: 1rem;
+}
+@media (min-width: 768px) {
+  p {
+    font-size: 1.125rem;
+  }
 }
 @media (min-width: 1024px) {
   p {
@@ -97,7 +116,7 @@ p {
   cursor: pointer;
   font-weight: 700;
   text-decoration: none;
-  display: block;
+  display: inline-block;
   color: #242424;
   padding-top: 0.5rem;
 }
@@ -371,6 +390,7 @@ header .header-content .desktop-nav {
 @media (min-width: 1024px) {
   .hero .hero-aside .aside-copy {
     text-align: left;
+    padding-left: 2rem;
   }
 }
 @media (min-width: 1600px) {
@@ -380,8 +400,13 @@ header .header-content .desktop-nav {
 }
 /* ***** ABOUT BLURB ***** */
 .about {
-  padding: 1.5rem 1rem;
+  padding: 2rem 1.5rem;
   background-color: #f2f2f2;
+}
+@media (min-width: 1024px) {
+  .about {
+    padding: 2rem;
+  }
 }
 @media (min-width: 1024px) {
   .about {
@@ -398,5 +423,115 @@ header .header-content .desktop-nav {
   .about img {
     display: inline-block;
     width: 40%;
+  }
+}
+/* ***** EVENTS SECTION ***** */
+.events-email {
+  padding: 2rem 1.5rem;
+}
+@media (min-width: 1024px) {
+  .events-email {
+    padding: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .events-email {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.events-email .events {
+  padding-bottom: 1.5rem;
+}
+.events-email .events .event-item {
+  margin-bottom: 1rem;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+}
+.events-email .events .event-item:nth-child(4),
+.events-email .events .event-item:nth-child(5) {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .events-email .events .event-item:nth-child(4),
+  .events-email .events .event-item:nth-child(5) {
+    display: flex;
+  }
+}
+@media (min-width: 768px) {
+  .events-email .events .event-item {
+    display: flex;
+  }
+}
+.events-email .events .event-item .date {
+  background-color: #b0b579;
+  border-radius: 5px 5px 0 0;
+  text-align: center;
+  padding: 0.5rem 0;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  .events-email .events .event-item .date {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px 0 0 5px;
+    width: 80px;
+    font-size: 1.125rem;
+  }
+  .events-email .events .event-item .date span {
+    display: block;
+  }
+}
+@media (min-width: 1024px) {
+  .events-email .events .event-item .date {
+    font-size: 1.25rem;
+  }
+}
+.events-email .events .event-item .event-name {
+  padding: 0.5rem;
+}
+@media (min-width: 768px) {
+  .events-email .events .event-item .event-name {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+  }
+}
+.events-email .email {
+  background-color: #82a9b4;
+  color: #ffffff;
+  text-align: center;
+  height: fit-content;
+  border-radius: 5px;
+  padding: 1.5rem 1rem;
+}
+@media (min-width: 1024px) {
+  .events-email .email {
+    padding: 3rem 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .events-email .email {
+    width: 40%;
+    margin-left: 1.5rem;
+  }
+}
+.events-email .email input {
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 1rem auto 0;
+  font-size: 1rem;
+  text-align: center;
+  display: block;
+  position: relative;
+  width: 80%;
+}
+@media (min-width: 1024px) {
+  .events-email .email input {
+    font-size: 1.125rem;
+    margin-top: 1.5rem;
   }
 }
