@@ -11,9 +11,13 @@ body {
     font-family: noto-sans, sans-serif;
 }
 
+//Header
 header {
+    background-color: @white;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
     height: 70px;
+    position: fixed;
+    width: 100%;
     .max-width {
         display: flex;
         align-items: center;
@@ -22,6 +26,7 @@ header {
         justify-content: space-between;
         img {
             height: 40px;
+            .links();
             @media (min-width: 768px) {
                 height: 50px;
             }
@@ -41,17 +46,22 @@ header {
                 right: 0;
                 background-color: @lightgray;
                 text-align: center;
+                transition-duration: 1s;
                 a {
+                    .links();
                     display: block;
                     padding: 1rem 0;
                     color: @darkgray;
                     text-decoration: none;
+                    &:hover {
+                        background-color: @gray;
+                    }
                 }
             }
             // Hamburger menu
             .hamburger {
                 display: inline-block;
-                cursor: pointer;
+                .links();
                 .bar1, .bar2, .bar3 {
                     width: 30px;
                     height: 4px;
@@ -75,7 +85,9 @@ header {
             display: none;
             @media(min-width: 768px) {
                 display: inline-block;
+                .links();
             }
         }
     }
 }
+

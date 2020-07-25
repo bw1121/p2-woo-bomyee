@@ -1,3 +1,9 @@
+.links {
+  cursor: pointer;
+}
+.links:hover {
+  font-weight: 700;
+}
 * {
   margin: 0;
   padding: 0;
@@ -7,8 +13,11 @@ body {
   font-family: noto-sans, sans-serif;
 }
 header {
+  background-color: #ffffff;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
   height: 70px;
+  position: fixed;
+  width: 100%;
 }
 header .max-width {
   display: flex;
@@ -19,6 +28,10 @@ header .max-width {
 }
 header .max-width img {
   height: 40px;
+  cursor: pointer;
+}
+header .max-width img:hover {
+  font-weight: 700;
 }
 @media (min-width: 768px) {
   header .max-width img {
@@ -41,16 +54,27 @@ header .max-width .mobile-nav .show {
   right: 0;
   background-color: #f2f2f2;
   text-align: center;
+  transition-duration: 1s;
 }
 header .max-width .mobile-nav .show a {
+  cursor: pointer;
   display: block;
   padding: 1rem 0;
   color: #242424;
   text-decoration: none;
 }
+header .max-width .mobile-nav .show a:hover {
+  font-weight: 700;
+}
+header .max-width .mobile-nav .show a:hover {
+  background-color: #d3d3d3;
+}
 header .max-width .mobile-nav .hamburger {
   display: inline-block;
   cursor: pointer;
+}
+header .max-width .mobile-nav .hamburger:hover {
+  font-weight: 700;
 }
 header .max-width .mobile-nav .hamburger .bar1,
 header .max-width .mobile-nav .hamburger .bar2,
@@ -75,5 +99,9 @@ header .max-width .desktop-nav {
 @media (min-width: 768px) {
   header .max-width .desktop-nav {
     display: inline-block;
+    cursor: pointer;
+  }
+  header .max-width .desktop-nav:hover {
+    font-weight: 700;
   }
 }

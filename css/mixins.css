@@ -1,0 +1,6 @@
+.links {
+  cursor: pointer;
+}
+.links:hover {
+  font-weight: 700;
+}
