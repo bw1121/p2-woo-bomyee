@@ -33,6 +33,21 @@ header .max-width img {
 header .max-width .mobile-nav .menu-links {
   display: none;
 }
+header .max-width .mobile-nav .show {
+  display: block;
+  position: absolute;
+  width: 100vw;
+  top: 70px;
+  right: 0;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+header .max-width .mobile-nav .show a {
+  display: block;
+  padding: 1rem 0;
+  color: #242424;
+  text-decoration: none;
+}
 header .max-width .mobile-nav .hamburger {
   display: inline-block;
   cursor: pointer;
