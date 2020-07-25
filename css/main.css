@@ -19,6 +19,9 @@
     margin: 1.5rem 0;
   }
 }
+.section-padding {
+  padding: 1.5rem 1rem;
+}
 /* ***** GLOBAL ***** */
 * {
   margin: 0;
@@ -88,6 +91,17 @@ p {
 }
 .btn-white:hover {
   background-color: #ffffff;
+  color: #b0b579;
+}
+.txt-link {
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  display: block;
+  color: #242424;
+  padding-top: 0.5rem;
+}
+.txt-link:hover {
   color: #b0b579;
 }
 /* ***** HEADER ***** */
@@ -364,7 +378,25 @@ header .header-content .desktop-nav {
     width: 580px;
   }
 }
-main img,
-.quick-links img {
-  width: 100%;
+/* ***** ABOUT BLURB ***** */
+.about {
+  padding: 1.5rem 1rem;
+  background-color: #f2f2f2;
+}
+@media (min-width: 1024px) {
+  .about {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.about img {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .about img {
+    display: inline-block;
+    width: 40%;
+  }
 }
