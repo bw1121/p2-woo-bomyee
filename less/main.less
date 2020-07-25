@@ -210,7 +210,9 @@ footer {
     background-color: @gray;
     text-align: center;
     .section-padding();
-    .body-copy();
+    p{
+        font-size: @font-16;
+    }
     .disclosure-label {
         .links();
         padding-bottom: @pad-sm;
@@ -248,7 +250,7 @@ footer {
     }
     .links {
         .links();
-        .btn();
+        border-radius: 5px;
         color: @darkgray;
         border-color: @green;
         width: 80%;
@@ -258,7 +260,7 @@ footer {
         padding: @pad-sm;
         margin: @pad-xs;
         &:hover {
-            background-color: @white;
+            background-color: @lightgray;
         }
         @media (min-width: 1024px) {
             margin: @pad-xs;
@@ -368,6 +370,7 @@ footer {
     .events{
         padding-bottom: @pad-md;
         .event-item {
+            text-align: center;
             margin-bottom: @pad-sm;
             border: 1px solid  @gray;
             border-radius: 5px;
@@ -384,7 +387,6 @@ footer {
                 .body-copy();
                 background-color: @green;
                 border-radius: 5px 5px 0 0;
-                text-align: center;
                 padding: @pad-xs 0;
                 font-weight: bold;
                 color: @white;
@@ -405,6 +407,7 @@ footer {
                     display: flex;
                     align-items: center;
                     padding: @pad-xs @pad-sm;
+                    text-align: left;
                 }
                 p {
                     padding-bottom: 0;
