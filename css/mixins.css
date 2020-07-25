@@ -3,3 +3,10 @@
   font-weight: 700;
   text-decoration: none;
 }
+.btn {
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 0.5rem 0;
+}

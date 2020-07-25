@@ -9,6 +9,25 @@
 
 body {
     font-family: noto-sans, sans-serif;
+    color: @darkgray;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: @font-16;
+    @media (min-width: 768px) {
+        font-size: @font-18;
+    }
+}
+
+.container {
+    @media (min-width: 1600px) {
+        display: flex;
+        justify-content: center;
+        .max-width {
+            width: 1600px;
+        }
+    }
 }
 
 /* ***** HEADER ***** */
@@ -21,19 +40,12 @@ header {
     @media (min-width: 1024px) {
         height: 70px;
     }
-    @media (min-width: 1600px) {
-        display: flex;
-        justify-content: center;
-    }
-    .max-width {
+    .header-content {
         padding: 0 @pad-sm;
         display: flex;
         align-items: center;
         height: 100%;
         justify-content: space-between;
-        @media (min-width: 1600px) {
-            width: 1600px;
-        }
         .logo {
             height: 40px;
             .links();
@@ -149,4 +161,43 @@ header {
 
 main img, .hero-img img, .quick-links img {
     width: 100%;
+}
+
+/* ***** QUICK LINKS ***** */
+.quick-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: 1024px) {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: @pad-sm;
+    }
+    .links {
+        width: 80%;
+        background-color: @fadedGreen;
+        display: flex;
+        justify-content: center;
+        .links();
+        color: @darkgray;
+        .btn();
+        border-color: @green;
+        &:hover {
+            background-color: @white;
+        }
+        @media (min-width: 1024px) {
+            margin: @pad-xs;
+            padding: @pad-sm @pad-xs;
+        }
+        img {
+            width: 22px;
+            padding-right: @pad-xs;
+            @media (min-width: 1440px) {
+                width: 28px;
+            }
+        }
+        h3 {
+            display: inline-block;
+        }
+    }
 }
