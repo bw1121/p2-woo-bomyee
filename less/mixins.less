@@ -8,10 +8,7 @@
 
 .rounded-container {
     border-radius: 5px;
-    padding: @pad-md @pad-sm;
-    @media (min-width: 1024px) {
-        padding: @pad-xl @pad-sm;
-    }
+    padding: @pad-sm;
 }
 
 .btn {
@@ -42,5 +39,16 @@
     @media (min-width: 1024px) {
         padding-top: 70px;
         flex-direction: row;
+    }
+}
+
+.body-copy {
+    font-size: @font-16;
+    padding-bottom: @pad-sm;
+    @media (min-width: 768px) {
+        font-size: @font-18;
+    }
+    @media (min-width: 1024px) {
+        font-size: @font-20;
     }
 }

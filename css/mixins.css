@@ -5,12 +5,7 @@
 }
 .rounded-container {
   border-radius: 5px;
-  padding: 1.5rem 1rem;
-}
-@media (min-width: 1024px) {
-  .rounded-container {
-    padding: 3rem 1rem;
-  }
+  padding: 1rem;
 }
 .btn {
   border-width: 4px;
@@ -43,5 +38,19 @@
   .fix-top {
     padding-top: 70px;
     flex-direction: row;
+  }
+}
+.body-copy {
+  font-size: 1rem;
+  padding-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .body-copy {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 1024px) {
+  .body-copy {
+    font-size: 1.25rem;
   }
 }

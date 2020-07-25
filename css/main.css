@@ -5,12 +5,7 @@
 }
 .rounded-container {
   border-radius: 5px;
-  padding: 1.5rem 1rem;
-}
-@media (min-width: 1024px) {
-  .rounded-container {
-    padding: 3rem 1rem;
-  }
+  padding: 1rem;
 }
 .btn {
   border-width: 4px;
@@ -45,6 +40,20 @@
     flex-direction: row;
   }
 }
+.body-copy {
+  font-size: 1rem;
+  padding-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .body-copy {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 1024px) {
+  .body-copy {
+    font-size: 1.25rem;
+  }
+}
 /* ***** GLOBAL ***** */
 * {
   margin: 0;
@@ -59,13 +68,18 @@ h1,
 h2 {
   font-size: 1.5rem;
   line-height: 1.8rem;
-  padding-bottom: 1rem;
 }
 @media (min-width: 1024px) {
   h1,
   h2 {
     font-size: 1.85rem;
   }
+}
+h1 {
+  padding-bottom: 1rem;
+}
+h2 {
+  padding: 1rem 0;
 }
 h3 {
   text-transform: uppercase;
@@ -284,14 +298,23 @@ footer {
   background-color: #d3d3d3;
   text-align: center;
   padding: 2rem 1.5rem;
+  font-size: 1rem;
+  padding-bottom: 1rem;
 }
 @media (min-width: 1024px) {
   footer {
     padding: 2rem;
   }
 }
-footer p {
-  font-size: 1rem;
+@media (min-width: 768px) {
+  footer {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 1024px) {
+  footer {
+    font-size: 1.25rem;
+  }
 }
 footer .disclosure-label {
   cursor: pointer;
@@ -547,6 +570,17 @@ footer .copyright a {
   color: #ffffff;
   text-transform: uppercase;
   font-size: 1rem;
+  padding-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .events-email .events .event-item .date {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 1024px) {
+  .events-email .events .event-item .date {
+    font-size: 1.25rem;
+  }
 }
 @media (min-width: 768px) {
   .events-email .events .event-item .date {
@@ -554,15 +588,9 @@ footer .copyright a {
     flex-direction: column;
     border-radius: 5px 0 0 5px;
     width: 80px;
-    font-size: 1.125rem;
   }
   .events-email .events .event-item .date span {
     display: block;
-  }
-}
-@media (min-width: 1024px) {
-  .events-email .events .event-item .date {
-    font-size: 1.25rem;
   }
 }
 .events-email .events .event-item .event-name {
@@ -581,17 +609,13 @@ footer .copyright a {
   text-align: center;
   height: fit-content;
   border-radius: 5px;
-  padding: 1.5rem 1rem;
-}
-@media (min-width: 1024px) {
-  .events-email .email {
-    padding: 3rem 1rem;
-  }
+  padding: 1rem;
 }
 @media (min-width: 1024px) {
   .events-email .email {
     width: 40%;
     margin-left: 1.5rem;
+    padding: 3rem 1rem;
   }
 }
 .events-email .email input {
@@ -644,7 +668,6 @@ footer .copyright a {
   }
 }
 .overview .overview-content .services-img {
-  padding-top: 1rem;
   width: 100%;
 }
 @media (min-width: 768px) {
@@ -661,4 +684,81 @@ footer .copyright a {
 .overview .overview-content .services-img img {
   width: 100%;
   border-radius: 5px;
+}
+/* ***** PROGRAMS ***** */
+.programs {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+@media (min-width: 1024px) {
+  .programs {
+    padding: 2rem;
+  }
+}
+.programs .group-accordions {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .programs .group-accordions {
+    padding-top: 1.5rem;
+  }
+}
+.programs .group-accordions .accordion {
+  padding: 1rem;
+  background-color: #ffffff;
+  text-align: left;
+  border: 1px solid #b0b579;
+  border-radius: 5px;
+  width: 90%;
+  margin-bottom: 0.5rem;
+}
+@media (min-width: 768px) {
+  .programs .group-accordions .accordion {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+}
+@media (min-width: 1440px) {
+  .programs .group-accordions .accordion {
+    width: 70%;
+  }
+}
+.programs .group-accordions .accordion .label {
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.programs .group-accordions .accordion .more-info {
+  padding: 1rem 0;
+}
+.programs .group-accordions .accordion .more-info li {
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  list-style-position: inside;
+  padding-left: 0.5rem;
+}
+@media (min-width: 768px) {
+  .programs .group-accordions .accordion .more-info li {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 1024px) {
+  .programs .group-accordions .accordion .more-info li {
+    font-size: 1.25rem;
+  }
+}
+.programs .group-accordions .accordion .closed {
+  font-size: 1.25rem;
+}
+@media (min-width: 768px) {
+  .programs .group-accordions .accordion .closed {
+    font-size: 1.85rem;
+  }
 }
