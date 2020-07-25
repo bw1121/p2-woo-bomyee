@@ -8,3 +8,12 @@ function toggleMenu() {
 }
 
 mobileMenu.addEventListener('click', toggleMenu);
+
+//Exit site btn
+var exitBtn = document.querySelector('.exit-btn');
+
+function exit() {
+    window.location = 'https://www.google.com';
+}
+
+exitBtn.addEventListener('click', exit);
