@@ -70,6 +70,10 @@ p {
     }
 }
 
+.hide {
+    display: none;
+}
+
 /* ***** HEADER ***** */
 header {
     background-color: @white;
@@ -209,21 +213,21 @@ footer {
     }
     .disclosure-label {
         .links();
+        padding-bottom: @pad-sm;
         @media (min-width: 1024px) {
             display: none;
         }
     }
     .disclosure {
-        display: none;
+        text-align: left;
+        padding-bottom: @pad-md;
         @media (min-width: 1024px) {
-            display: block;
-            text-align: left;
+            display: block !important;
         }
     }
-
     .copyright {
         font-weight: @bold;
-        padding-top: @pad-lg;
+        padding-top: @pad-md;
         a {
             .links();
             color: @darkgray;

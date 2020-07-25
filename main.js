@@ -29,7 +29,7 @@ dropDown.addEventListener('mouseover', showDropDown);
 dropDown.addEventListener('mouseout', hideDropDown);
 
 
-// Exit site btn
+// Exit Site Btn
 var exitBtn = document.querySelector('.exit-btn');
 
 function exit() {
@@ -37,3 +37,21 @@ function exit() {
 }
 
 exitBtn.addEventListener('click', exit);
+
+// Footer Disclosure Drop Down
+var disclosure = document.querySelector('.disclosure');
+var disclosureLabel = document.querySelector('.disclosure-label');
+var plusSymbol = document.querySelector('.plus');
+
+function showDisclosure() {
+    if (disclosure.style.display === 'none') {
+        disclosure.style.display = 'block';
+        plusSymbol.innerHTML = '&#8722;';
+    } 
+    else {
+        disclosure.style.display = 'none';
+        plusSymbol.innerHTML = '&#43;';
+    }
+}
+
+disclosureLabel.addEventListener('click', showDisclosure);

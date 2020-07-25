@@ -123,6 +123,9 @@ p {
 .txt-link:hover {
   color: #b0b579;
 }
+.hide {
+  display: none;
+}
 /* ***** HEADER ***** */
 header {
   background-color: #ffffff;
@@ -281,6 +284,7 @@ footer .disclosure-label {
   cursor: pointer;
   font-weight: 700;
   text-decoration: none;
+  padding-bottom: 1rem;
 }
 @media (min-width: 1024px) {
   footer .disclosure-label {
@@ -288,17 +292,17 @@ footer .disclosure-label {
   }
 }
 footer .disclosure {
-  display: none;
+  text-align: left;
+  padding-bottom: 1.5rem;
 }
 @media (min-width: 1024px) {
   footer .disclosure {
-    display: block;
-    text-align: left;
+    display: block !important;
   }
 }
 footer .copyright {
   font-weight: 700;
-  padding-top: 2rem;
+  padding-top: 1.5rem;
 }
 footer .copyright a {
   cursor: pointer;
