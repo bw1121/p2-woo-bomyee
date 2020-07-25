@@ -6,3 +6,59 @@
 body {
   font-family: noto-sans, sans-serif;
 }
+header {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  height: 70px;
+}
+header .max-width {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 3%;
+  justify-content: space-between;
+}
+header .max-width img {
+  height: 40px;
+}
+@media (min-width: 768px) {
+  header .max-width img {
+    height: 50px;
+  }
+}
+@media (min-width: 768px) {
+  header .max-width .mobile-nav {
+    display: none;
+  }
+}
+header .max-width .mobile-nav .menu-links {
+  display: none;
+}
+header .max-width .mobile-nav .hamburger {
+  display: inline-block;
+  cursor: pointer;
+}
+header .max-width .mobile-nav .hamburger .bar1,
+header .max-width .mobile-nav .hamburger .bar2,
+header .max-width .mobile-nav .hamburger .bar3 {
+  width: 30px;
+  height: 4px;
+  background-color: #242424;
+  margin: 5px 0;
+}
+header .max-width .mobile-nav .close .bar1 {
+  transform: rotate(45deg) translate(9px, 3px);
+}
+header .max-width .mobile-nav .close .bar2 {
+  opacity: 0;
+}
+header .max-width .mobile-nav .close .bar3 {
+  transform: rotate(-45deg) translate(9px, -4px);
+}
+header .max-width .desktop-nav {
+  display: none;
+}
+@media (min-width: 768px) {
+  header .max-width .desktop-nav {
+    display: inline-block;
+  }
+}
