@@ -252,7 +252,6 @@ header .header-content .logo img {
 }
 header .header-content .mobile-nav {
   height: 30px;
-  text-transform: uppercase;
 }
 @media (min-width: 1024px) {
   header .header-content .mobile-nav {
@@ -927,6 +926,11 @@ footer .copyright a {
 .learn .slide .slide-content .tool-nav a {
   margin: 1rem 0;
 }
+@media (min-width: 1024px) {
+  .learn #slide3 .pie {
+    margin: 0;
+  }
+}
 .learn #slide3 .key {
   padding-top: 1rem;
 }
@@ -952,6 +956,7 @@ footer .copyright a {
 }
 .learn #slide4 .slide-copy {
   flex-direction: column;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .learn #slide4 .slide-copy {

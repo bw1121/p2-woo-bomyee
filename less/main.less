@@ -139,7 +139,6 @@ header {
         // Mobile Nav
         .mobile-nav {
             height: 30px;
-            text-transform: uppercase;
             @media (min-width: 1024px) {
                 display: none;
             }
@@ -664,6 +663,11 @@ footer {
     }
     // Slide 3
     #slide3 {
+        .pie {
+            @media (min-width: 1024px) {
+                margin: 0;
+            }
+        }
         .key {
             padding-top: @pad-sm;
             div {
@@ -692,6 +696,7 @@ footer {
     #slide4 {
         .slide-copy {
             flex-direction: column;
+            text-align: center;
             @media (min-width: 768px) {
                 justify-content: flex-start;
             }
