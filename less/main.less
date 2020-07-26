@@ -570,74 +570,197 @@ footer {
 /* ***** LEARN PAGE ***** */
 /* ***** TOOL ***** */
 .learn {
-    .fix-top();
-    overflow: scroll;
+    .section-padding();
     background-color: @blue;
-    height: calc(~'100vh - 60px');
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    @media (min-width: 1024px) {
-        height: calc(~'100vh - 70px');
-    }
-    // General slide styles
-    .slide {
-        // display: none;
-        background-color: @white;
-        border-radius: 5px;
-        width: 75%;
-        position: relative;
-        max-width: 1000px;
-        .slide-content {
-            overflow: scroll;
-            height: 65vh;
-            margin-bottom: 70px;
-            .section-padding();
-        }
-        .tool-nav {
-            text-align: center;
-            position: absolute;
-            bottom: 0;
-            background-color: @white; 
-            width: 100%;
-            border-radius: 0 0 5px 5px;
-            box-shadow: 1px 0 4px rgba(0, 0, 0, 0.15);
-            a {
-                margin: @pad-sm @pad-xs;
-            }
-        }
-    }
-    // Slide 1
-    #slide1, .slide-content {
-        .section-padding();
+    // Slide 1 - intro
+    #slide1 {
+        .fix-top();
         color: @white;
         text-align: center;
         max-width: 900px;
-        z-index: 5;
-    }
-    // Slide 2
-    #slide2 .slide-content {
-        z-index: 4;
+        height: calc(~'100vh - 60px');
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    // General slide styles
+    .slide {
+        height: calc(~'100vh - 60px');
+        padding-top: 60px;
+        max-width: 1000px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         @media (min-width: 1024px) {
-            flex-direction: row;
-            justify-content: space-between;
+            padding-top: 70px;
+            height: calc(~'100vh - 70px');
         }
-        img {
-            display: none;
-            @media (min-width: 768px) {
-                display: inline-block;
-                width: 70%;
-                height: 250px;
-                object-fit: cover;
-                border-radius: 5px;
-                margin-top: @pad-md;
-            }
+        .slide-content {
+            height: 80%;
+            background-color: @white;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            .rounded-container();
             @media (min-width: 1024px) {
-                width: 40%;
-                height: 250px;
-                margin-left: @pad-lg;
+                height: 70%;;
+            }
+            .slide-copy {
+                overflow: scroll;
+                margin-bottom: 58px;
+                display: flex;
+                flex-direction: column;
+                @media (min-width: 768px) {
+                    .section-padding();
+                }
+                @media (min-width: 1024px) {
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+                img {
+                    display: none;
+                    @media (min-width: 768px) {
+                        display: inline-block;
+                        width: 70%;
+                        height: 250px;
+                        object-fit: cover;
+                        border-radius: 5px;
+                        margin-top: @pad-md;
+                    }
+                    @media (min-width: 1024px) {
+                        width: 40%;
+                        height: 250px;
+                        margin-left: @pad-lg;
+                    }
+                }
+                .fit {
+                    object-fit: scale-down;
+                    display: inline-block;
+                    margin: auto;
+                    height: 200px;
+                    @media (min-width: 768px) {
+                        height: 300px;
+                    }
+                }
+            }
+            .tool-nav {
+                text-align: center;
+                position: absolute;
+                bottom: 0;
+                background-color: @white;
+                box-shadow: 1px 0 4px rgba(0, 0, 0, 0.15);
+                width: 100%;
+                border-radius: 0 0 5px 5px;
+                a {
+                    margin: @pad-sm 0;
+                }
+            }
+        }
+    }
+    // Slide 3
+    #slide3 {
+        .key {
+            padding-top: @pad-sm;
+            div {
+                display: flex;
+                align-items: center;
+                .circle {
+                    height: 15px;
+                    width: 15px;
+                    border-radius: 100%;
+                    display: inline;
+                    margin-bottom: @pad-sm;
+                    margin-right: @pad-sm;
+                }
+                .circle1 {
+                    background-color: @green;
+                }
+                .circle2 {
+                    background-color: @darkgray;
+                }
+                .circle3 {
+                    background-color: @gray;
+                }
+            }
+        }
+    }
+    // Slide 4
+    #slide4 {
+        .slide-copy {
+            flex-direction: column;
+            @media (min-width: 768px) {
+                justify-content: flex-start;
+            }
+            .infograph-sec {
+                display: flex;
+                flex-direction: column;
+                @media (min-width: 550px) {
+                    flex-direction: row;
+                    justify-content: space-around;
+                }
+                .infograph {
+                    text-align: center;
+                    padding-bottom: @pad-sm;
+                    @media (min-width: 550px) {
+                        width: 45%;
+                    }
+                    @media (min-width: 768px) {
+                        width: 35%;
+                    }
+                    img {
+                        height: 70px;
+                        @media (min-width: 768px) {
+                            height: 90px;
+                            padding-bottom: @pad-sm;
+                            padding-top: @pad-sm;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // Slide 5
+    #slide5 .slide-copy {
+        @media (min-width: 540px) {
+            flex-direction: row;
+        }
+        .quotes {
+            @media (min-width: 1024px) {
+                margin: 0;
+            }
+            .background-circle {
+                background-color: @fadedGreen;
+                border-radius: 100%;
+                width: 200px;
+                height: 200px;
+                margin: @pad-sm 0;
+                position: relative;
+                @media (min-width: 700px) {
+                    width: 250px;
+                    height: 250px;
+                    margin-left: @pad-sm;
+                }
+                @media (min-width: 1024px) {
+                    width: 380px;
+                    height: 380px;
+                }
+                .quote-content {
+                    position: absolute;
+                    bottom: 40px;
+                    text-align: center;
+                    padding: @pad-xs;
+                    @media (min-width: 700px) {
+                        bottom: 60px;
+                        padding: @pad-sm;
+                    }
+                    @media (min-width: 1024px) {
+                        bottom: 130px;
+                    }
+                }
             }
         }
     }

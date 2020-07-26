@@ -805,85 +805,89 @@ footer .copyright a {
 /* ***** LEARN PAGE ***** */
 /* ***** TOOL ***** */
 .learn {
-  padding-top: 60px;
-  overflow: scroll;
+  padding: 2rem 1.5rem;
   background-color: #82a9b4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .learn {
+    padding: 2rem;
+  }
+}
+.learn #slide1 {
+  padding-top: 60px;
+  color: #ffffff;
+  text-align: center;
+  max-width: 900px;
   height: calc(100vh - 60px);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 @media (min-width: 1024px) {
-  .learn {
+  .learn #slide1 {
     padding-top: 70px;
     flex-direction: row;
   }
 }
+.learn .slide {
+  height: calc(100vh - 60px);
+  padding-top: 60px;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media (min-width: 1024px) {
-  .learn {
+  .learn .slide {
+    padding-top: 70px;
     height: calc(100vh - 70px);
   }
 }
-.learn .slide {
-  background-color: #ffffff;
-  border-radius: 5px;
-  width: 75%;
-  position: relative;
-  max-width: 1000px;
-}
 .learn .slide .slide-content {
-  overflow: scroll;
-  height: 65vh;
-  margin-bottom: 70px;
-  padding: 2rem 1.5rem;
+  height: 80%;
+  background-color: #ffffff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 1rem;
 }
 @media (min-width: 1024px) {
   .learn .slide .slide-content {
-    padding: 2rem;
+    height: 70%;
   }
 }
-.learn .slide .tool-nav {
-  text-align: center;
-  position: absolute;
-  bottom: 0;
-  background-color: #ffffff;
-  width: 100%;
-  border-radius: 0 0 5px 5px;
-  box-shadow: 1px 0 4px rgba(0, 0, 0, 0.15);
-}
-.learn .slide .tool-nav a {
-  margin: 1rem 0.5rem;
-}
-.learn #slide1,
-.learn .slide-content {
-  padding: 2rem 1.5rem;
-  color: #ffffff;
-  text-align: center;
-  max-width: 900px;
-  z-index: 5;
-}
-@media (min-width: 1024px) {
-  .learn #slide1,
-  .learn .slide-content {
-    padding: 2rem;
-  }
-}
-.learn #slide2 .slide-content {
-  z-index: 4;
+.learn .slide .slide-content .slide-copy {
+  overflow: scroll;
+  margin-bottom: 58px;
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 768px) {
+  .learn .slide .slide-content .slide-copy {
+    padding: 2rem 1.5rem;
+  }
+}
+@media (min-width: 768px) and (min-width: 1024px) {
+  .learn .slide .slide-content .slide-copy {
+    padding: 2rem;
+  }
+}
 @media (min-width: 1024px) {
-  .learn #slide2 .slide-content {
+  .learn .slide .slide-content .slide-copy {
     flex-direction: row;
     justify-content: space-between;
   }
 }
-.learn #slide2 .slide-content img {
+.learn .slide .slide-content .slide-copy img {
   display: none;
 }
 @media (min-width: 768px) {
-  .learn #slide2 .slide-content img {
+  .learn .slide .slide-content .slide-copy img {
     display: inline-block;
     width: 70%;
     height: 250px;
@@ -893,9 +897,146 @@ footer .copyright a {
   }
 }
 @media (min-width: 1024px) {
-  .learn #slide2 .slide-content img {
+  .learn .slide .slide-content .slide-copy img {
     width: 40%;
     height: 250px;
     margin-left: 2rem;
+  }
+}
+.learn .slide .slide-content .slide-copy .fit {
+  object-fit: scale-down;
+  display: inline-block;
+  margin: auto;
+  height: 200px;
+}
+@media (min-width: 768px) {
+  .learn .slide .slide-content .slide-copy .fit {
+    height: 300px;
+  }
+}
+.learn .slide .slide-content .tool-nav {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  background-color: #ffffff;
+  box-shadow: 1px 0 4px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  border-radius: 0 0 5px 5px;
+}
+.learn .slide .slide-content .tool-nav a {
+  margin: 1rem 0;
+}
+.learn #slide3 .key {
+  padding-top: 1rem;
+}
+.learn #slide3 .key div {
+  display: flex;
+  align-items: center;
+}
+.learn #slide3 .key div .circle {
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+  display: inline;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+.learn #slide3 .key div .circle1 {
+  background-color: #b0b579;
+}
+.learn #slide3 .key div .circle2 {
+  background-color: #242424;
+}
+.learn #slide3 .key div .circle3 {
+  background-color: #d3d3d3;
+}
+.learn #slide4 .slide-copy {
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .learn #slide4 .slide-copy {
+    justify-content: flex-start;
+  }
+}
+.learn #slide4 .slide-copy .infograph-sec {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 550px) {
+  .learn #slide4 .slide-copy .infograph-sec {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+.learn #slide4 .slide-copy .infograph-sec .infograph {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+@media (min-width: 550px) {
+  .learn #slide4 .slide-copy .infograph-sec .infograph {
+    width: 45%;
+  }
+}
+@media (min-width: 768px) {
+  .learn #slide4 .slide-copy .infograph-sec .infograph {
+    width: 35%;
+  }
+}
+.learn #slide4 .slide-copy .infograph-sec .infograph img {
+  height: 70px;
+}
+@media (min-width: 768px) {
+  .learn #slide4 .slide-copy .infograph-sec .infograph img {
+    height: 90px;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+}
+@media (min-width: 540px) {
+  .learn #slide5 .slide-copy {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1024px) {
+  .learn #slide5 .slide-copy .quotes {
+    margin: 0;
+  }
+}
+.learn #slide5 .slide-copy .quotes .background-circle {
+  background-color: rgba(176, 181, 121, 0.3);
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  margin: 1rem 0;
+  position: relative;
+}
+@media (min-width: 700px) {
+  .learn #slide5 .slide-copy .quotes .background-circle {
+    width: 250px;
+    height: 250px;
+    margin-left: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .learn #slide5 .slide-copy .quotes .background-circle {
+    width: 380px;
+    height: 380px;
+  }
+}
+.learn #slide5 .slide-copy .quotes .background-circle .quote-content {
+  position: absolute;
+  bottom: 40px;
+  text-align: center;
+  padding: 0.5rem;
+}
+@media (min-width: 700px) {
+  .learn #slide5 .slide-copy .quotes .background-circle .quote-content {
+    bottom: 60px;
+    padding: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .learn #slide5 .slide-copy .quotes .background-circle .quote-content {
+    bottom: 130px;
   }
 }
