@@ -68,6 +68,7 @@ h2 {
   h1,
   h2 {
     font-size: 1.85rem;
+    line-height: 2.2rem;
   }
 }
 h1 {
@@ -730,7 +731,7 @@ footer .copyright a {
   width: 100%;
   border-radius: 5px;
 }
-/* ***** PROGRAMS ***** */
+/* ***** PROGRAMS ACCORDIONS ***** */
 .programs {
   padding: 2rem 1.5rem;
   text-align: center;
