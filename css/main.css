@@ -1003,6 +1003,9 @@ footer .copyright a {
   }
 }
 .learn #slide5 .slide-copy .quotes .background-circle {
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
   background-color: rgba(176, 181, 121, 0.3);
   border-radius: 100%;
   width: 200px;
@@ -1025,18 +1028,15 @@ footer .copyright a {
 }
 .learn #slide5 .slide-copy .quotes .background-circle .quote-content {
   position: absolute;
-  bottom: 40px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
   padding: 0.5rem;
+  width: 90%;
 }
 @media (min-width: 700px) {
   .learn #slide5 .slide-copy .quotes .background-circle .quote-content {
-    bottom: 60px;
     padding: 1rem;
-  }
-}
-@media (min-width: 1024px) {
-  .learn #slide5 .slide-copy .quotes .background-circle .quote-content {
-    bottom: 130px;
   }
 }

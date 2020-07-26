@@ -733,6 +733,7 @@ footer {
                 margin: 0;
             }
             .background-circle {
+                .links();
                 background-color: @fadedGreen;
                 border-radius: 100%;
                 width: 200px;
@@ -750,15 +751,14 @@ footer {
                 }
                 .quote-content {
                     position: absolute;
-                    bottom: 40px;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%,-50%);
                     text-align: center;
                     padding: @pad-xs;
+                    width: 90%;
                     @media (min-width: 700px) {
-                        bottom: 60px;
                         padding: @pad-sm;
-                    }
-                    @media (min-width: 1024px) {
-                        bottom: 130px;
                     }
                 }
             }
